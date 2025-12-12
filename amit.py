@@ -58,16 +58,14 @@
 
 
 
-# creditcard_dashboard.py
+
 import streamlit as st
 import pandas as pd
 import pickle
 import numpy as np
 import os
 
-# -----------------------------
-# CONFIG
-# -----------------------------
+
 st.set_page_config(
     page_title="Credit Card Fraud Detection Dashboard",
     page_icon="💳",
@@ -81,9 +79,7 @@ IMPUTER_PATH = os.path.join(OUTPUT_DIR, "imputer.pkl")
 SNAPSHOT = os.path.join(OUTPUT_DIR, "used_data_head.csv")
 TARGET_COL = "Class"
 
-# -----------------------------
-# LOAD OBJECTS
-# -----------------------------
+
 @st.cache_resource
 def load_objects():
     try:
